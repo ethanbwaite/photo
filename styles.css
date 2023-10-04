@@ -11,6 +11,17 @@
     flex: 0 0 calc(33.33% - 10px); /* Adjust the width as needed */
     margin: 5px;
     overflow: hidden;
+    perspective: 800px; /* Define a perspective for the tilt effect */
+}
+
+.image-wrapper {
+    position: relative;
+    transform-style: preserve-3d; /* Enable 3D transformations */
+    transition: transform 0.3s ease; /* Add a smooth transition effect */
+}
+
+.photo-item:hover .image-wrapper {
+    transform: rotateY(10deg); /* Apply a tilt effect on hover */
 }
 
 /* CSS to make images responsive */

@@ -1,0 +1,20 @@
+/* styles.css */
+/* CSS for the grid container */
+.photo-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* CSS for each photo item */
+.photo-item {
+    flex: 0 0 calc(33.33% - 10px); /* Adjust the width as needed */
+    margin: 5px;
+    overflow: hidden;
+}
+
+/* CSS to make images responsive */
+.photo-item img {
+    max-width: 100%;
+    height: auto;
+}

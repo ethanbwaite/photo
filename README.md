@@ -1,2 +1,2 @@
 # photo
-photography showcase
+pictures i've taken

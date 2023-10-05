@@ -1,32 +1,51 @@
 /* styles.css */
+body {
+    transition-duration: 1s;
+    background-color: #faf9f9;
+}
+
+p {
+    font-family: monospace;
+}
+
 /* CSS for the grid container */
 .photo-grid {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
+    transition-duration: 1s;
 }
 
-/* CSS for each photo item */
 .photo-item {
-    flex: 0 0 calc(33.33% - 10px); /* Adjust the width as needed */
+    background-color: #faf9f9;
     margin: 5px;
     overflow: hidden;
-    perspective: 800px; /* Define a perspective for the tilt effect */
+    transition: transform 1s ease, box-shadow 1s ease;
+    height: 50vh;
+    width: 50vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 12px;
+    border-radius: 4px;
 }
 
-.image-wrapper {
-    position: relative;
-    transform-style: preserve-3d; /* Enable 3D transformations */
-    transition: transform 0.3s ease; /* Add a smooth transition effect */
+.photo-item:hover {
+    /* box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.5); */
+    transform: scale(1.02);
+    transition: transform 1s ease, box-shadow 1s ease;
 }
 
-.photo-item:hover .image-wrapper {
-    transform: scale(1.1);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+.photo-item:active {
+    transform: scale(0.975);
+    transition: transform 1s ease, box-shadow 1s ease;
 }
 
-/* CSS to make images responsive */
-.photo-item img {
-    max-width: 100%;
-    height: auto;
+img {
+    width: 50vh;
+    height: 50vh;
+    object-fit: contain;
+    padding: 16px;
 }
